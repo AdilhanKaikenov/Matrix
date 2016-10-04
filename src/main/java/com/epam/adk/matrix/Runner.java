@@ -16,10 +16,10 @@ public class Runner {
     public static void main(String[] args) {
 
         // Creating matrices - initialized with random numbers (MULTIPLICATION)
-        Matrix matrix1 = new Matrix();
-        Matrix matrix2 = new Matrix();
-        matrix1.initRandomly(3, 3);
-        matrix2.initRandomly(3, 5);
+        Matrix matrix1 = new Matrix(3, 3);
+        Matrix matrix2 = new Matrix(3, 5);
+        matrix1.initRandomly();
+        matrix2.initRandomly();
         Matrix result1 = matrix1.multiply(matrix2);
         MatrixExpression expression1 = new MatrixExpression(new Matrix[]{matrix1, matrix2}, result1, Operation.MULTIPLICATION);
 

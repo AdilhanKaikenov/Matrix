@@ -9,7 +9,8 @@ public class Matrix {
 
     private int[][] values;
 
-    public Matrix() {
+    public Matrix(int rows, int columns) {
+        values = new int[rows][columns];
     }
 
     public Matrix(int[][] matrix) {
@@ -19,11 +20,11 @@ public class Matrix {
     /**
      * The method for filling a matrix with random numbers.
      *
-     * @param rows number of rows.
-     * @param columns number of columns.
      */
-    public void initRandomly(int rows, int columns) {
-        values = new int[rows][columns];
+    public void initRandomly() {
+
+        int rows = values.length;
+        int columns = values[0].length;
 
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
