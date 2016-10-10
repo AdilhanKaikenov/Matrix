@@ -1,5 +1,7 @@
 package com.epam.adk.matrix;
 
+import java.util.Random;
+
 /**
  * Created by Kaikenov Adilhan on 30.09.2016.
  *
@@ -20,15 +22,16 @@ public class Matrix {
     /**
      * The method for filling a matrix with random numbers.
      *
+     * @param range a random number in [-range - +range].
      */
-    public void initRandomly() {
-
+    public void initRandomly(int range) {
+        Random random = new Random();
         int rows = values.length;
         int columns = values[0].length;
 
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
-                values[i][j] = (int) (Math.random() * 100 - 50);
+                values[i][j] = (random.nextInt(range * 2 + 1) - range);
             }
         }
     }

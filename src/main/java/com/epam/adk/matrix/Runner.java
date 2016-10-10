@@ -1,5 +1,7 @@
 package com.epam.adk.matrix;
 
+import java.util.Random;
+
 /**
  * Created by Kaikenov Adilhan on 30.09.2016.
  * The class with main method.
@@ -18,8 +20,8 @@ public class Runner {
         // Creating matrices - initialized with random numbers (MULTIPLICATION)
         Matrix matrix1 = new Matrix(3, 3);
         Matrix matrix2 = new Matrix(3, 5);
-        matrix1.initRandomly();
-        matrix2.initRandomly();
+        matrix1.initRandomly(10);
+        matrix2.initRandomly(10);
         Matrix result1 = matrix1.multiply(matrix2);
         MatrixExpression expression1 = new MatrixExpression(new Matrix[]{matrix1, matrix2}, result1, Operation.MULTIPLICATION);
 
